@@ -33,8 +33,8 @@ function handleTicketChange(ticketTypes, isIncrease) {
 
   // storing the amount inside the total-amount element
   document.getElementById("total-amount").innerText = "$" + totalTicketAmount;
-  calculateTotalAmount();
   modalMessage(ticketNewCount, totalTicketAmount);
+  calculateTotalAmount();
 }
 
 // calculation of total
@@ -53,6 +53,7 @@ function calculateTotalAmount() {
   // calculating total grand amount and storing inside grandTotal variable and grand-total elements
   const grandTotal = totalPrice + tax;
   document.getElementById("grand-total").innerText = "$" + grandTotal;
+  modalMessage(firstClassTicketCount, economyTicketCount, grandTotal);
 }
 
 // function for getting the input
@@ -62,17 +63,18 @@ function getInputValue(ticketTypes) {
   return ticketCount;
 }
 
-function modalMessage(ticketNumbers, totalAmout) {
+function modalMessage(firstClassTicketCount, economyTicketCount, totalAmout) {
   const modalBodyMessage = document.getElementById("modal-message");
+  const modalHeadingMessage = document.getElementById("modal-heading");
+  modalHeadingMessage.innerText = "Congratulations";
+  modalHeadingMessage.style.color = "green";
   modalBodyMessage.innerText =
     "You have booked " +
-    ticketNumbers +
-    " tickets and Your total amount is " +
-    totalAmout;
-
-  const modalHeadingMessage = document.getElementById("modal-heading");
-  modalHeadingMessage.style.color = "green";
-  modalHeadingMessage.innerText = "Congratulations";
+    firstClassTicketCount +
+    " First Class and " +
+    economyTicketCount +
+    " Economy class";
+  " tickets and Your total amount is " + totalAmout;
   return modalHeadingMessage, modalBodyMessage;
 }
 
