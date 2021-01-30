@@ -31,13 +31,16 @@ nav ul {
 }
 nav ul li a {
   color: #fff;
+  text-decoration: none;
   padding: 10px;
+  margin-left: 10px;
   text-transform: uppercase;
 }
 nav ul li a:hover,
 a.active {
   background-color: #3352f2;
   border-radius: 5px;
+  color: #fff;
 }
 .main-content {
   display: grid;
