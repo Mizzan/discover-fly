@@ -137,3 +137,9 @@ a.active {
   display: flex;
   justify-content: space-between;
 }
+
+/* custom css */
+
+#modal-heading {
+  color: red;
+}

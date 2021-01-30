@@ -17,7 +17,7 @@ function handleTicketChange(ticketTypes, isIncrease) {
     ticketNewCount = ticketCount + 1;
   }
   // checking if value positive and decrease
-  if (isIncrease == false && ticketCount > 1) {
+  if (isIncrease == false && ticketCount > 0) {
     ticketNewCount = ticketCount - 1;
   }
   document.getElementById(ticketTypes + "-ticket-count").value = ticketNewCount;
@@ -34,6 +34,7 @@ function handleTicketChange(ticketTypes, isIncrease) {
   // storing the amount inside the total-amount element
   document.getElementById("total-amount").innerText = "$" + totalTicketAmount;
   calculateTotalAmount();
+  modalMessage(ticketNewCount, totalTicketAmount);
 }
 
 // calculation of total
@@ -59,6 +60,20 @@ function getInputValue(ticketTypes) {
   const ticketInput = document.getElementById(ticketTypes + "-ticket-count");
   const ticketCount = parseInt(ticketInput.value);
   return ticketCount;
+}
+
+function modalMessage(ticketNumbers, totalAmout) {
+  const modalBodyMessage = document.getElementById("modal-message");
+  modalBodyMessage.innerText =
+    "You have booked " +
+    ticketNumbers +
+    " tickets and Your total amount is " +
+    totalAmout;
+
+  const modalHeadingMessage = document.getElementById("modal-heading");
+  modalHeadingMessage.style.color = "green";
+  modalHeadingMessage.innerText = "Congratulations";
+  return modalHeadingMessage, modalBodyMessage;
 }
 
 /*---------------------------------------------------------- 

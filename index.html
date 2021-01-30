@@ -76,8 +76,8 @@
               class="inp-style"
               type="number"
               name=""
-              value="1"
-              min="1"
+              value="0"
+              min="0"
               required
             />
           </div>
@@ -107,8 +107,7 @@
               class="inp-style"
               type="number"
               name=""
-              min="1"
-              value="1"
+              value="0"
               required
             />
           </div>
@@ -135,7 +134,7 @@
               <p>Subtotal</p>
             </div>
             <div class="right">
-              <p id="total-amount">$250</p>
+              <p id="total-amount">$0</p>
             </div>
           </div>
 
@@ -144,7 +143,7 @@
               <p>Charge 10% VAT</p>
             </div>
             <div class="right">
-              <p id="tax-amount">$25</p>
+              <p id="tax-amount">$0</p>
             </div>
           </div>
           <hr />
@@ -153,7 +152,7 @@
               <h4>Total</h4>
             </div>
             <div class="right">
-              <p id="grand-total">$275</p>
+              <p id="grand-total">$0</p>
             </div>
           </div>
         </div>
@@ -201,7 +200,7 @@
               class="modal-title text-success text-bold text-center"
               id="staticBackdropLabel"
             >
-              Congratulations
+              <span id="modal-heading">Book Your Ticket First</span>
             </h3>
             <button
               type="button"
@@ -211,7 +210,9 @@
             ></button>
           </div>
           <div class="modal-body">
-            <strong>You have successfully booked your air tickets.</strong>
+            <strong id="modal-message"
+              >You have not booked yet. <span id="ticket-type"></span
+            ></strong>
           </div>
           <div class="modal-footer">
             <button
