@@ -46,7 +46,7 @@
             class="inp-style"
             type="text"
             name=""
-            placeholder="Dhake, Bangladesh"
+            placeholder="Dhaka, Bangladesh"
           />
         </div>
         <div class="input-group">
@@ -71,11 +71,27 @@
         <div class="input-group f-class">
           <div>
             <label for="">First Class ($150)</label>
-            <input class="inp-style" type="number" name="" value="1" />
+            <input
+              id="ticket-count"
+              class="inp-style"
+              type="number"
+              name=""
+              value="1"
+            />
           </div>
           <div class="plus-minus-btn">
-            <button class="btn btn-success ticket-increase">&plus;</button>
-            <button class="btn btn-success ticket-decrease">&minus;</button>
+            <button
+              id="firstClass-ticket-increase"
+              class="btn btn-success ticket-increase"
+            >
+              &plus;
+            </button>
+            <button
+              id="firstClass-ticket-decrease"
+              class="btn btn-success ticket-decrease"
+            >
+              &minus;
+            </button>
           </div>
         </div>
 
@@ -135,5 +151,8 @@
     </main>
 
     <!--Thank You-->
+
+    <!-- Custom JavaScript -->
+    <script src="./script.js"></script>
   </body>
 </html>
